@@ -1,10 +1,10 @@
-package com.study.project.kimandlimprojectapi;
+package com.study.project.kalp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class KimAndLimProjectApiApplicationTests {
+class ApiApplicationTests {
 
     @Test
     void contextLoads() {

@@ -1,13 +1,13 @@
-package com.study.project.kimandlimprojectapi;
+package com.study.project.kalp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class KimAndLimProjectApiApplication {
+public class ApiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(KimAndLimProjectApiApplication.class, args);
+        SpringApplication.run(ApiApplication.class, args);
     }
 
 }
