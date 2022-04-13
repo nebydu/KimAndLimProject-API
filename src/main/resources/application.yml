@@ -1,0 +1,31 @@
+# server
+server:
+  port: 8081
+
+#MySql
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/kalp?useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&serverTimezone=Asia/Seoul
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: kalp
+    password: 8282gkwk1!
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+
+#log
+logging:
+  level:
+    root: DEBUG
+
+
+#공공
+kalp:
+  api:
+    url: http://apis.data.go.kr/B551182/pubReliefHospService/getpubReliefHospList
+    key: S0wllkkU81Doqu5t0Dsq7LA1K5eb4FF9at0LMEUKom1pcKSlsfVCSk2qEdUgoRYQTIaw74lDXz2DmzNuurS4CA%3D%3D
+
