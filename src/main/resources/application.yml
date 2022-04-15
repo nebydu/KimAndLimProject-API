@@ -5,10 +5,10 @@ server:
 #MySql
 spring:
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/kalp?useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&serverTimezone=Asia/Seoul
+    url: jdbc:mysql://34.64.139.98:3306/KALP?useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&serverTimezone=Asia/Seoul
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: kalp
-    password: 8282gkwk1!
+    password: kalp123
   jpa:
     show-sql: true
     hibernate:
@@ -20,7 +20,7 @@ spring:
 #log
 logging:
   level:
-    root: DEBUG
+    root: INFO
 
 
 #공공
