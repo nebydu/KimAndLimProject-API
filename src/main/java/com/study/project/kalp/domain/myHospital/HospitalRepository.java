@@ -7,9 +7,9 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface MyHospitalRepository extends JpaRepository<MyHospital, Integer> {
+public interface HospitalRepository extends JpaRepository<Hospital, Integer> {
 
-    @Query("SELECT h FROM MyHospital h ORDER BY h.id DESC")
-    List<MyHospital> findAllDesc();
+    @Query("SELECT h FROM Hospital h ORDER BY h.id DESC")
+    List<Hospital> findAllDesc();
 
 }
