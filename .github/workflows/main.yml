@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 env:
-  PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+  PROJECT_ID: ${{ secrets.GCP_PROJECT_ID  }}
   GCE_INSTANCE: ${{ secrets.GCE_INSTANCE_KALP_1 }}	  
   GCE_INSTANCE_ZONE: ${{ secrets.GCE_INSTANCE_KALP_1_ZONE }}	
   
