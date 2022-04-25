@@ -13,17 +13,15 @@ public class HospitalSaveRequestDto {
     private String city;
     private String district;
     private String hospitalName;
-    private String hospitalType;
     private String telNo;
     private String adtFrDd;
     private String spclAdmTypeCd;
 
     @Builder
-    public HospitalSaveRequestDto(String city, String district, String hospitalName, String hospitalType, String telNo, String adtFrDd, String spclAdmTypeCd) {
+    public HospitalSaveRequestDto(String city, String district, String hospitalName, String telNo, String adtFrDd, String spclAdmTypeCd) {
         this.city = city;
         this.district = district;
         this.hospitalName = hospitalName;
-        this.hospitalType = hospitalType;
         this.telNo = telNo;
         this.adtFrDd = adtFrDd;
         this.spclAdmTypeCd = spclAdmTypeCd;
@@ -34,7 +32,6 @@ public class HospitalSaveRequestDto {
                 .city(city)
                 .district(district)
                 .hospitalName(hospitalName)
-                .hospitalType(hospitalType)
                 .telNo(telNo)
                 .adtFrDd(adtFrDd)
                 .spclAdmTypeCd(spclAdmTypeCd)
