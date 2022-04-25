@@ -3,7 +3,7 @@ plugins {
     id 'org.springframework.boot' version '2.5.2'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
-    id 'com.google.cloud.tools.jib' version '3.1.2'
+    //id 'com.google.cloud.tools.jib' version '3.1.2'
 }
 
 apply plugin: 'java'
@@ -43,15 +43,15 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
-jib {
-    from {
-        image = "adoptopenjdk/openjdk16:x86_64-alpine-jdk-16.0.1_9"
-    }
-    to {
-        image = "sepiro2000/hello-jib"
-        tags = ["latest"]
-    }
-    container {
-        jvmFlags = ["-Xms128m", "-Xmx128m"]
-    }
-}
+//jib {
+//    from {
+//        image = "adoptopenjdk/openjdk16:x86_64-alpine-jdk-16.0.1_9"
+//    }
+//    to {
+//        image = "sepiro2000/hello-jib"
+//        tags = ["latest"]
+//    }
+//    container {
+//        jvmFlags = ["-Xms128m", "-Xmx128m"]
+//    }
+//}
