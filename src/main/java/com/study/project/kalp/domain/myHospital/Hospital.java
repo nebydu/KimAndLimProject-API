@@ -25,9 +25,6 @@ public class Hospital extends BaseTimeEntity {
     private String hospitalName;
 
     @Column
-    private String hospitalType;
-
-    @Column
     private String telNo;
 
     @Column
@@ -37,11 +34,10 @@ public class Hospital extends BaseTimeEntity {
     private String spclAdmTypeCd;
 
     @Builder
-    public Hospital(String city, String district, String hospitalName, String hospitalType, String telNo, String adtFrDd, String spclAdmTypeCd) {
+    public Hospital(String city, String district, String hospitalName, String telNo, String adtFrDd, String spclAdmTypeCd) {
         this.city = city;
         this.district = district;
         this.hospitalName = hospitalName;
-        this.hospitalType = hospitalType;
         this.telNo = telNo;
         this.adtFrDd = adtFrDd;
         this.spclAdmTypeCd = spclAdmTypeCd;

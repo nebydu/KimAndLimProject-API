@@ -74,13 +74,11 @@ public class HospitalController {
     }
 
     private String getMainHospitalData() throws Exception {
-        logger.info("apiURL="+apiURL);
-        logger.info("apiKey="+apiKey);
         StringBuilder urlBuilder = new StringBuilder(apiURL); /*URL*/
         urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=" +apiKey); /*Service Key*/
         urlBuilder.append("&" + URLEncoder.encode("pageNo","UTF-8") + "=" + URLEncoder.encode("1", "UTF-8")); /*페이지번호*/
-        urlBuilder.append("&" + URLEncoder.encode("numOfRows","UTF-8") + "=" + URLEncoder.encode("10", "UTF-8")); /*한 페이지 결과 수*/
-        urlBuilder.append("&" + URLEncoder.encode("spclAdmTyCd","UTF-8") + "=" + URLEncoder.encode("A0", "UTF-8")); /*A0: 국민안심병원/97: 코로나검사 실시기관/99: 코로나 선별진료소 운영기관*/
+        urlBuilder.append("&" + URLEncoder.encode("numOfRows","UTF-8") + "=" + URLEncoder.encode("100", "UTF-8")); /*한 페이지 결과 수*/
+//        urlBuilder.append("&" + URLEncoder.encode("spclAdmTyCd","UTF-8") + "=" + URLEncoder.encode("97", "UTF-8")); /*A0: 국민안심병원/97: 코로나검사 실시기관/99: 코로나 선별진료소 운영기관*/
         URL url = new URL(urlBuilder.toString());
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
@@ -100,7 +98,7 @@ public class HospitalController {
         rd.close();
         conn.disconnect();
         logger.info(sb.toString());
-        //getResultDto(sb.toString());
+        getResultDto(sb.toString());
         return sb.toString();
     }
 
@@ -124,14 +122,12 @@ public class HospitalController {
                 hospitalSaveRequestDto.setCity(getTagValue("sidoNm", element));
                 hospitalSaveRequestDto.setDistrict(getTagValue("sgguNm", element));
                 hospitalSaveRequestDto.setHospitalName(getTagValue("yadmNm", element));
-                hospitalSaveRequestDto.setHospitalType(getTagValue("hospTyTpCd", element));
                 hospitalSaveRequestDto.setTelNo(getTagValue("telno", element));
                 hospitalSaveRequestDto.setAdtFrDd(getTagValue("adtFrDd", element));
-                hospitalSaveRequestDto.setSpclAdmTypeCd(getTagValue("spclAdmTypeCd", element));
+                hospitalSaveRequestDto.setSpclAdmTypeCd(getTagValue("spclAdmTyCd", element));
 
-                logger.info("병원이름 = "+hospitalSaveRequestDto.getHospitalName());
                 logger.info(hospitalSaveRequestDto.toString());
-                //hospitalService.save(hospitalSaveRequestDto);
+                hospitalService.save(hospitalSaveRequestDto);
             }
         }
     }
