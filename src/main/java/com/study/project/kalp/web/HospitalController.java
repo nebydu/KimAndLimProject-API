@@ -84,6 +84,7 @@ public class HospitalController {
         conn.setRequestMethod("GET");
         conn.setRequestProperty("Content-type", "application/json");
         logger.info("Response code: " + conn.getResponseCode());
+        //테스트
         BufferedReader rd;
         if(conn.getResponseCode() >= 200 && conn.getResponseCode() <= 300) {
             rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
