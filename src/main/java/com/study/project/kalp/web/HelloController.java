@@ -16,7 +16,7 @@ public class HelloController {
     })
     @GetMapping("/hello")
     public String hello() {
-        return "hello";
+        return "hello api response를 정상으로 받았습니다.";
     }
 
     @ApiOperation(value= "", notes="안녕누구야", response = String.class)
@@ -30,6 +30,6 @@ public class HelloController {
     })
     @GetMapping("/hello/dto")
     public HelloResponseDto helloDto(@RequestParam("name") String name) {
-        return new HelloResponseDto(name);
+        return new HelloResponseDto("Welcome!!!!!!!!! " + name);
     }
 }

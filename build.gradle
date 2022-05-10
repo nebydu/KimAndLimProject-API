@@ -13,7 +13,7 @@ apply plugin: 'io.spring.dependency-management' //스프링부트의 의존성�
 
 group = 'com.study.project'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+sourceCompatibility = '11'
 
 repositories {
     mavenCentral()
